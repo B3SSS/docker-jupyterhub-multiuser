@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  jupyterhub:
+    build: .
+    container_name: jhubcontainer
+    ports:
+      - "8000:8000"
+    volumes:
+      - "data:/home"
+      - config:/etc/jupyterhub
+
+volumes:
+  data:
+  config:
+    
